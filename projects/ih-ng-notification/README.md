@@ -1,25 +1,120 @@
-# IhNgNotification
+# IH NG Notification
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+This is like plug-and-play lib no need to add any customization to your project just install the lib and import its module in your desired module and start using IHNotificationService for your beautiful web notifications/toasters.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name --project ih-ng-notification` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ih-ng-notification`.
+- No viewContainer or bootstrap required
+- Component inheritance for custom notification UI
+- Angular Material Supported for notification/toast position including ltr and rtl support
+- Mat Icon supported
+- Translation supported
+- For Heading and Message HTML format support
+- On click Custom Action Callback support
 
-> Note: Don't forget to add `--project ih-ng-notification` or else it will be added to the default project in your `angular.json` file.
+## Dependencies
 
-## Build
+- Angular Material
+- ngx-translate/core
+- Angular Flex
 
-Run `ng build ih-ng-notification` to build the project. The build artifacts will be stored in the `dist/` directory.
+## How to Install
 
-## Publishing
+`npm i ih-ng-notification` or `pnpm add ih-ng-notification`
 
-After building your library with `ng build ih-ng-notification`, go to the dist folder `cd dist/ih-ng-notification` and run `npm publish`.
+## Setup
 
-## Running unit tests
+```
+import { IHNotificationModule } from 'ih-ng-notification';
 
-Run `ng test ih-ng-notification` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [
+    ...,
 
-## Further help
+    IHNotificationModule,
+  ],
+  ...
+})
+class YourModule {}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How to Use
+
+```
+import { IHNotificationService } from 'ih-ng-notification';
+
+@Component({...})
+export class YourComponent {
+  constructor(private readonly notificationService: IHNotificationService) {}
+
+  public showSuccess() {
+    this.notificationService.
+        success('MESSAGE', 'HEADING', true, { ...custom config });
+  }
+
+  public showError() {
+    this.notificationService.
+        error('MESSAGE', 'HEADING', true, { ...custom config });
+  }
+
+  public showWarning() {
+    this.notificationService.
+        warning('MESSAGE', 'HEADING', true, { ...custom config });
+  }
+
+  public showInformation() {
+    this.notificationService.
+        info('MESSAGE', 'HEADING', true, { ...custom config });
+  }
+
+  public showWithCustomActionButtonAndCallBack() {
+    this.notificationService.
+        showNotificationWithCustomActionIcon('MESSAGE', 'NOTIFICATION_TYPE', { icon: 'home', tooltip: 'text',
+         cb: ()=> {
+            ....
+          }
+        }, 'HEADING', { ...custom config });
+  }
+}
+```
+
+## Options
+
+For now you can see all the options available in `IHNotificationService` service doc. we'll add detailed doc in here too.
+
+For the reference you can see Interface here
+
+```
+/**
+ * @description This interface is for custom notification action button config
+ * @author IDNAN.HAIDER
+ * @export
+ * @interface CustomActionInterface
+ */
+export interface CustomActionInterface {
+  icon: string;
+  tooltip: string;
+  cb: Function;
+}
+
+/**
+ * @description This interface is for notification data
+ * @author IDNAN.HAIDER
+ * @export
+ * @interface NotificationDataInterface
+ */
+export interface NotificationDataInterface {
+  heading?: string;
+  message: string;
+  icon: string;
+  closeable?: boolean;
+  action?: CustomActionInterface;
+}
+
+export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+```
+
+## Reach me out
+
+- [LinkedIn](https://www.linkedin.com/in/adnanhaider-sse/)
+- [GitHub](https://github.com/Idnan-Haider)
