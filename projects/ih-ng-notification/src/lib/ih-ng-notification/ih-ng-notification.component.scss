@@ -1,0 +1,33 @@
+icon-cursor-pointer {
+  cursor: pointer;
+}
+
+@function get-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000;
+  } @else {
+    @return #ffffff;
+  }
+}
+
+@mixin notification-msg($bg-color) {
+  color: get-text-color($bg-color) !important;
+  background-color: $bg-color !important;
+  min-height: 2.4rem;
+}
+
+::ng-deep .success-notification {
+  @include notification-msg(#00a800);
+}
+
+::ng-deep .error-notification {
+  @include notification-msg(#d70b00);
+}
+
+::ng-deep .warning-notification {
+  @include notification-msg(#ec8c33);
+}
+
+::ng-deep .info-notification {
+  @include notification-msg(#8adef8);
+}

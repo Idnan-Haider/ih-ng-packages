@@ -1,0 +1,34 @@
+<div fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="0.5rem"
+    >
+      <!-- Icon -->
+      <mat-icon class="icon-notification">{{ notificationData.icon }}</mat-icon>
+
+      <div fxFlex fxLayout="column">
+        <!-- Heading here HTMLsupport available -->
+        <div
+          *ngIf="notificationData.heading"
+          [innerHTML]="notificationData.message"
+        ></div>
+
+        <!-- Message here HTMLsupport available -->
+        <div [innerHTML]="notificationData.message"></div>
+      </div>
+    </div>
+
+    <mat-icon
+      matTooltip="{{ notificationData.action?.tooltip }}"
+      fxFlex="5"
+      class="icon-cursor-pointer"
+      (click)="customAction()"
+      >{{
+        notificationData.closeable ? "close" : notificationData.action?.icon
+      }}</mat-icon
+    >
+  </div>
+</div>
