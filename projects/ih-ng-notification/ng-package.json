@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../builds/ih-ng-notification",
+  "dest": "../../dist/ih-ng-notification",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

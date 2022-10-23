@@ -10,11 +10,11 @@ Run `ng generate component component-name --project ih-ng-notification` to gener
 
 ## Build
 
-Run `ng build ih-ng-notification` to build the project. The build artifacts will be stored in the `builds/` directory.
+Run `ng build ih-ng-notification` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Publishing
 
-After building your library with `ng build ih-ng-notification`, go to the builds folder `cd builds/ih-ng-notification` and run `npm publish`.
+After building your library with `ng build ih-ng-notification`, go to the dist folder `cd dist/ih-ng-notification` and run `npm publish`.
 
 ## Running unit tests
 

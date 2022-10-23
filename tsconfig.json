@@ -3,12 +3,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./builds/out-tsc",
+    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
-      "ih-ng-notification": ["builds/ih-ng-notification"]
+      "ih-ng-notification": ["dist/ih-ng-notification"]
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
