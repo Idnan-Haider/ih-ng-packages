@@ -13,7 +13,7 @@
         <!-- Heading here HTMLsupport available -->
         <div
           *ngIf="notificationData.heading"
-          [innerHTML]="notificationData.message"
+          [innerHTML]="notificationData.heading"
         ></div>
 
         <!-- Message here HTMLsupport available -->
@@ -23,7 +23,7 @@
 
     <mat-icon
       matTooltip="{{ notificationData.action?.tooltip }}"
-      fxFlex="5"
+      fxFlex="7"
       class="icon-cursor-pointer"
       (click)="customAction()"
       >{{

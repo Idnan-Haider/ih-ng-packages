@@ -3,5 +3,10 @@
   "dest": "../../dist/ih-ng-notification",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": [
+    "@angular/material",
+    "@angular/flex-layout",
+    "@ngx-translate/core"
+  ]
 }
