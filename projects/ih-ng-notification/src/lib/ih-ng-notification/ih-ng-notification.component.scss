@@ -1,5 +1,8 @@
-icon-cursor-pointer {
+.icon-cursor-pointer {
   cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+  }
 }
 
 @function get-text-color($color) {
