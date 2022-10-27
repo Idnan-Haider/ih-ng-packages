@@ -12,11 +12,17 @@ This is like plug-and-play lib no need to add any customization to your project 
 - For Heading and Message HTML format support
 - On click Custom Action Callback support
 
+## Images
+
+![Warning](./assets/success.png)
+![Warning](./assets/error.png)
+![Warning](./assets/warning.png)
+![Warning](./assets/info.png)
+
 ## Dependencies
 
 - Angular Material
-- ngx-translate/core
-- Angular Flex
+- ngx-translate/core (TODO)
 
 ## How to Install
 

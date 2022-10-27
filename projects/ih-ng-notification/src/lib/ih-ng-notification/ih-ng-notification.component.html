@@ -1,34 +1,24 @@
-<div fxLayout="column">
-  <div fxLayout="row" fxLayoutAlign="space-between center">
-    <div
-      fxFlex
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      fxLayoutGap="0.5rem"
-    >
-      <!-- Icon -->
-      <mat-icon class="icon-notification">{{ notificationData.icon }}</mat-icon>
-
-      <div fxFlex fxLayout="column">
-        <!-- TODO Heading here HTMLsupport available -->
-        <!-- <div
-          *ngIf="notificationData.heading"
-          [innerHTML]="notificationData.heading"
+<div class="row-space-between">
+  <mat-icon class="icon-notification">{{ notificationData.icon }}</mat-icon>
+  <div class="msg">
+    <!-- TODO Heading here HTMLsupport available -->
+    <!-- <div
+        *ngIf="notificationData.heading"
+        [innerHTML]="notificationData.heading"
         ></div> -->
 
-        <!-- Message here HTMLsupport available -->
-        <div [innerHTML]="notificationData.message"></div>
-      </div>
-    </div>
-
-    <mat-icon
-      matTooltip="{{ notificationData.action?.tooltip }}"
-      fxFlex="7"
-      class="icon-cursor-pointer"
-      (click)="customAction()"
-      >{{
-        notificationData.closeable ? "close" : notificationData.action?.icon
-      }}</mat-icon
-    >
+    <!-- TODO Translation will be added in next version -->
+    <!-- Message here HTMLsupport available -->
+    <div [innerHTML]="notificationData.message"></div>
   </div>
+
+  <mat-icon
+    matTooltip="{{ notificationData.action?.tooltip }}"
+    class="icon-cursor-pointer"
+    (click)="customAction()"
+  >
+    {{
+      notificationData.closeable ? "close" : notificationData.action?.icon
+    }}</mat-icon
+  >
 </div>

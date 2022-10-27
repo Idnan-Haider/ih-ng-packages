@@ -1,3 +1,9 @@
+mat-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 1.6rem;
+}
+
 .icon-cursor-pointer {
   cursor: pointer;
   &:hover {
@@ -33,4 +39,21 @@
 
 ::ng-deep .info-notification {
   @include notification-msg(#8adef8);
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  width: 80%;
+}
+
+.row {
+  &-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

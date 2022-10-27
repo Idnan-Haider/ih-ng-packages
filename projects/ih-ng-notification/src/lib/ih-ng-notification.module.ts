@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { MatIconModule } from '@angular/material/icon';
 import {
@@ -16,15 +14,7 @@ import { IHNotificationComponent } from './ih-ng-notification/ih-ng-notification
 /**
  * @type {*}
  */
-const module = [
-  MatSnackBarModule,
-  MatIconModule,
-  MatTooltipModule,
-
-  FlexLayoutModule,
-
-  TranslateModule,
-];
+const module = [MatSnackBarModule, MatIconModule, MatTooltipModule];
 
 // Default Snackbar configuration
 export const DEFAULT_SNACK_BAR_CONFIG: MatSnackBarConfig = {
