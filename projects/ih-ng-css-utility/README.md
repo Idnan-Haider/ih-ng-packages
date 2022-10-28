@@ -7,6 +7,13 @@ This is like a plug-and-play library that provides multiple directives. Each dir
 - Set CSS dynamically on run time.
 - No need of bootstrap, tailwind, css file, scss functions, or material utility classes
 
+## Available Utility Directives
+
+- [ihPM](./src/lib/directives/padding-margin.directive.ts) For setting padding and margin
+- [ihBR](./src/lib/directives/border-radius.directive.ts) For setting border radius
+
+### Other utilities are in Queue, Hopefully, you'll get 2 utilities per minor version they are coming on every weekend.
+
 ## How to Install
 
 `npm i ih-ng-css-utility` or `pnpm add ih-ng-css-utility`
