@@ -33,6 +33,37 @@
           }
         }
       }
+    },
+    "ih-ng-css-utility": {
+      "projectType": "library",
+      "root": "projects/ih-ng-css-utility",
+      "sourceRoot": "projects/ih-ng-css-utility/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ih-ng-css-utility/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ih-ng-css-utility/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ih-ng-css-utility/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ih-ng-css-utility/src/test.ts",
+            "tsConfig": "projects/ih-ng-css-utility/tsconfig.spec.json",
+            "karmaConfig": "projects/ih-ng-css-utility/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {

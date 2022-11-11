@@ -14,10 +14,10 @@ This is like plug-and-play lib no need to add any customization to your project 
 
 ## Images
 
-![Warning](./assets/success.png)
-![Warning](./assets/error.png)
-![Warning](./assets/warning.png)
-![Warning](./assets/info.png)
+![Warning](/assets/success.png)
+![Warning](/assets/error.png)
+![Warning](/assets/warning.png)
+![Warning](/assets/info.png)
 
 ## Dependencies
 

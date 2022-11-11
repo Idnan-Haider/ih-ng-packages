@@ -1,0 +1,30 @@
+{
+  "name": "ih-ng-css-utility",
+  "version": "0.0.2",
+  "description": "A simple utility library to apply some basic CSS",
+  "author": "Idnan Haider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Idnan-Haider/ih-ng-packages/tree/main/projects/ih-ng-css-utility"
+  },
+  "keywords": [
+    "angular css",
+    "ng-padding",
+    "angular css utility",
+    "ng-css-utility",
+    "css-utility",
+    "ng-margin",
+    "ng-width",
+    "ng-height",
+    "ng-border-radius",
+    "css"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

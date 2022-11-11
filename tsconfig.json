@@ -8,6 +8,9 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
+      "ih-ng-css-utility": [
+        "dist/ih-ng-css-utility"
+      ],
       "ih-ng-notification": ["dist/ih-ng-notification"]
     },
     "noPropertyAccessFromIndexSignature": true,
