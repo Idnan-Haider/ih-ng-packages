@@ -9,8 +9,9 @@ This is like a plug-and-play library that provides multiple directives. Each dir
 
 ## Available Utility Directives
 
-- [ihPM](./src/lib/directives/padding-margin.directive.ts) For setting padding and margin
+- [ihPM](./src/lib/directives/padding-margin.directive.ts) For setting padding or margin or both
 - [ihBR](./src/lib/directives/border-radius.directive.ts) For setting border radius
+- [ihHW](./src/lib/directives/height-width.directive.ts) For setting height or width or both
 
 ### Other utilities are in Queue, Hopefully, you'll get 2 utilities per minor version they are coming on every weekend.
 
@@ -37,6 +38,7 @@ class YourModule {}
 ## How to Use
 
 ```
+
 // [ihPM] directive for providing padding and margin
 // here 'pValue' is for padding value and 'mValue' is for margin value
 <div ihPM pValue="1rem" mValue="1rem"></div>
@@ -46,6 +48,9 @@ class YourModule {}
 
 // [ihBR] directive for providing border-radius
 <div ihBR="1rem"></div>
+
+// [ihHW] directive for providing width or height
+<div hValue="1rem" pValue="10px"></div>
 
 ```
 
@@ -74,6 +79,12 @@ export type PaddingMarginValueType =
   | `-${number}${UnitType} -${number}${UnitType}`
   | `-${number}${UnitType} -${number}${UnitType} -${number}${UnitType}`
   | `-${number}${UnitType} -${number}${UnitType} -${number}${UnitType} -${number}${UnitType}`;
+
+/**
+ * This is the type for input value just like CSS accept value for height and width
+ */
+export type HeightWidthValueType = `${number}${UnitType}`;
+
 ```
 
 ## Reach me out
