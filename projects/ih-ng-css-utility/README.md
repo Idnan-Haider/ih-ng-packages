@@ -9,9 +9,10 @@ This is like a plug-and-play library that provides multiple directives. Each dir
 
 ## Available Utility Directives
 
-- [ihPM](./src/lib/directives/padding-margin.directive.ts) For setting padding or margin or both
-- [ihBR](./src/lib/directives/border-radius.directive.ts) For setting border radius
-- [ihHW](./src/lib/directives/height-width.directive.ts) For setting height or width or both
+- [ihPM](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/padding-margin.directive.ts) For setting padding or margin or both
+- [ihBR](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/border-radius.directive.ts) For setting border radius
+- [ihHW](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/height-width.directive.ts) For setting height or width or both
+- [ihFW](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/font-weight.directive.ts) For setting Font Weight
 
 ### Other utilities are in Queue, Hopefully, you'll get 2 utilities per minor version they are coming on every weekend.
 
@@ -49,6 +50,9 @@ class YourModule {}
 // [ihBR] directive for providing border-radius
 <div ihBR="1rem"></div>
 
+// [ihFW] directive for providing font-weight
+<span ihFW="600">Some Text Here</span>
+
 // [ihHW] directive for providing width or height
 <div hValue="1rem" pValue="10px"></div>
 
@@ -56,7 +60,7 @@ class YourModule {}
 
 ## Options
 
-If you are curios about Interfaces here is the [Reference](./src/lib/Interfaces/utility.interface.ts)
+If you are curios about Interfaces here is the [Reference](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/Interfaces/utility.interface.ts)
 
 ```
 type UnitType = 'px' | 'em' | 'rem' | '%' | 'pt' | 'vw' | 'vh' | '';
@@ -84,6 +88,28 @@ export type PaddingMarginValueType =
  * This is the type for input value just like CSS accept value for height and width
  */
 export type HeightWidthValueType = `${number}${UnitType}`;
+
+/**
+ * This is the type for input value just like CSS accept value for font weight
+ */
+export type FontWeightValueType =
+  | 'unset'
+  | 'normal'
+  | 'revert'
+  | 'lighter'
+  | 'initial'
+  | 'inherit'
+  | 'bold'
+  | 'bolder'
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '500'
+  | '600'
+  | '700'
+  | '800'
+  | '900';
 
 ```
 

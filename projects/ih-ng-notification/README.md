@@ -14,10 +14,10 @@ This is like plug-and-play lib no need to add any customization to your project 
 
 ## Images
 
-![Warning](/assets/success.png)
-![Warning](/assets/error.png)
-![Warning](/assets/warning.png)
-![Warning](/assets/info.png)
+![Warning](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-notification/assets/success.png)
+![Error](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-notification/assets/error.png)
+![Warning](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-notification/assets/warning.png)
+![Warning](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-notification/assets/info.png)
 
 ## Dependencies
 
