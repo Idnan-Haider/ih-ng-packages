@@ -7,7 +7,7 @@ export class BorderRadiusDirective implements AfterViewInit {
   @Input() ihBR!: BorderRadiusValueType;
 
   /**
-   * Creates an instance of PMDirective.
+   * Creates an instance of BorderRadiusDirective.
    * @author IDNAN.HAIDER
    * @param elementRef
    */

@@ -1,6 +1,6 @@
 {
   "name": "ih-ng-css-utility",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple utility library to apply some basic CSS",
   "author": "Idnan Haider",
   "repository": {
@@ -17,6 +17,7 @@
     "ng-width",
     "ng-height",
     "ng-border-radius",
+    "ng-font-weight",
     "css"
   ],
   "license": "MIT",
