@@ -45,3 +45,23 @@ export type FontWeightValueType =
   | '700'
   | '800'
   | '900';
+
+/**
+ * This is the type for input value just like CSS accept value for font size
+ */
+export type FontSizeValueType =
+  | `${number}${UnitType}`
+  | 'initial'
+  | 'inherit'
+  | 'unset'
+  | 'medium'
+  | 'revert'
+  | 'large'
+  | 'larger'
+  | 'x-large'
+  | 'xx-large'
+  | 'xxx-large'
+  | 'small'
+  | 'smaller'
+  | 'x-small'
+  | 'xx-small';
