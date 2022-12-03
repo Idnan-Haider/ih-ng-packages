@@ -14,6 +14,7 @@ This is like a plug-and-play library that provides multiple directives. Each dir
 - [ihHW](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/height-width.directive.ts) For setting height or width or both
 - [ihFW](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/font-weight.directive.ts) For setting Font Weight
 - [ihFZ](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/font-size.directive.ts) For setting Font Size
+- [ihFlex](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/flex.directive.ts) For setting Flex properties
 
 ### Other utilities are in Queue, Hopefully, you'll get 2 utilities per minor version they are coming on every weekend.
 
@@ -58,7 +59,10 @@ class YourModule {}
 <span ihFZ="large">Some Text Here</span>
 
 // [ihHW] directive for providing width or height
-<div hValue="1rem" pValue="10px"></div>
+<div ihHW hValue="1rem" wValue="10px"></div>
+
+// [ihFlex] directive for display Flex and its properties
+<div ihFlex flexDirection="row" justifyContent="space-between"></div>
 
 ```
 
