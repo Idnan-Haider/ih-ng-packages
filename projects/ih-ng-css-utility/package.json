@@ -1,7 +1,7 @@
 {
   "name": "ih-ng-css-utility",
-  "version": "0.0.3",
-  "description": "A simple utility library to apply some basic CSS",
+  "version": "0.0.6",
+  "description": "A simple utility that provides you some directives to set some basic CSS at run time",
   "author": "Idnan Haider",
   "repository": {
     "type": "git",
@@ -10,6 +10,8 @@
   "keywords": [
     "angular css",
     "ng-padding",
+    "ng-flex",
+    "flex css",
     "angular css utility",
     "ng-css-utility",
     "css-utility",
@@ -22,8 +24,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^14.2.0",
-    "@angular/core": "^14.2.0"
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
