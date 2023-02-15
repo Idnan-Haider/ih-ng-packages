@@ -1,4 +1,11 @@
-import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  Directive,
+  ElementRef,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import {
   AlignContentType,
   AlignItemsType,
@@ -10,7 +17,7 @@ import {
 } from '../Interfaces/flex.interface';
 
 @Directive({ selector: '[ihFlex]' })
-export class FlexDirective implements AfterViewInit {
+export class FlexDirective implements AfterViewInit, OnChanges {
   /**
    * @description This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept.
    * Think of flex items as primarily laying out either in horizontal rows or vertical columns.
@@ -75,13 +82,20 @@ export class FlexDirective implements AfterViewInit {
   constructor(private readonly elementRef: ElementRef) {}
 
   /**
+   * @description setting the properties if value is changed dynamically
+   * @author IDNAN.HAIDER
+   * @param changes
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    this.setProperties();
+  }
+
+  /**
    * @description setting css after view init
    * @author IDNAN.HAIDER
    */
   ngAfterViewInit(): void {
     this.elementRef.nativeElement.style.display = 'flex';
-    this.elementRef.nativeElement.style.flexDirection =
-      this.flexDirection || 'row';
     this.setProperties();
   }
 
@@ -91,6 +105,8 @@ export class FlexDirective implements AfterViewInit {
    * @private
    */
   private setProperties() {
+    this.elementRef.nativeElement.style.flexDirection =
+      this.flexDirection || 'row';
     if (this.flexFlow)
       this.elementRef.nativeElement.style.flexFlow = this.flexFlow;
     if (this.flexWrap)

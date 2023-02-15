@@ -1,6 +1,6 @@
 {
   "name": "ih-ng-css-utility",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A simple utility that provides you some directives to set some basic CSS at run time",
   "author": "Idnan Haider",
   "repository": {

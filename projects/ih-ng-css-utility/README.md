@@ -13,7 +13,7 @@ This is like a plug-and-play library that provides multiple directives. Each dir
 - [ihBR](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/border-radius.directive.ts) For setting border radius
 - [ihHW](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/height-width.directive.ts) For setting height or width or both
 - [ihFW](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/font-weight.directive.ts) For setting Font Weight
-- [ihFZ](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/font-size.directive.ts) For setting Font Size
+- [ihFS](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/font-size.directive.ts) For setting Font Size
 - [ihFlex](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/directives/flex.directive.ts) For setting Flex properties
 
 ### Other utilities are in Queue, Hopefully, you'll get 2 utilities per minor version they are coming on every weekend.
@@ -55,8 +55,8 @@ class YourModule {}
 // [ihFW] directive for providing font-weight
 <span ihFW="600">Some Text Here</span>
 
-// [ihFZ] directive for providing font-size
-<span ihFZ="large">Some Text Here</span>
+// [ihFS] directive for providing font-size
+<span ihFS="large">Some Text Here</span>
 
 // [ihHW] directive for providing width or height
 <div ihHW hValue="1rem" wValue="10px"></div>
