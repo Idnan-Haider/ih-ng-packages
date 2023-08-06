@@ -38,7 +38,7 @@ pnpm add ih-ng-notification
 
 ## Setup
 
-```
+```ts
 import { IHNotificationModule } from 'ih-ng-notification';
 
 @NgModule({
@@ -54,7 +54,7 @@ class YourModule {}
 
 ## How to Use
 
-```
+```ts
 import { IHNotificationService } from 'ih-ng-notification';
 
 @Component({...})
@@ -98,7 +98,7 @@ For now you can see all the options available in `IHNotificationService` service
 
 For the reference you can see Interface here
 
-```
+```ts
 /**
  * @description This interface is for custom notification action button config
  * @author IDNAN.HAIDER
@@ -125,7 +125,7 @@ export interface NotificationDataInterface {
   action?: CustomActionInterface;
 }
 
-export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+export type NotificationType = "success" | "error" | "warning" | "info";
 ```
 
 ## Reach me out

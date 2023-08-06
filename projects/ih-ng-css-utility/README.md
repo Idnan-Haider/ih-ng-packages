@@ -20,11 +20,19 @@ This is like a plug-and-play library that provides multiple directives. Each dir
 
 ## How to Install
 
-`npm i ih-ng-css-utility` or `pnpm add ih-ng-css-utility`
+```shell
+npm i ih-ng-css-utility
+```
+
+OR
+
+```shell
+pnpm add ih-ng-css-utility
+```
 
 ## Setup
 
-```
+```ts
 import { IHCssUtilityModule } from 'ih-ng-css-utility';
 
 @NgModule({
@@ -40,10 +48,8 @@ class YourModule {}
 
 ## How to Use
 
-```
-
-// [ihPM] directive for providing padding and margin
-// here 'pValue' is for padding value and 'mValue' is for margin value
+```html
+// [ihPM] directive for providing padding and margin // here 'pValue' is for padding value and 'mValue' is for margin value
 <div ihPM pValue="1rem" mValue="1rem"></div>
 
 // you can provide value for 'top', 'right', 'bottom', and 'left' in CSS way, see below
@@ -63,34 +69,24 @@ class YourModule {}
 
 // [ihFlex] directive for display Flex and its properties
 <div ihFlex flexDirection="row" justifyContent="space-between"></div>
-
 ```
 
 ## Options
 
 If you are curios about Interfaces here is the [Reference](https://github.com/Idnan-Haider/ih-ng-packages/blob/main/projects/ih-ng-css-utility/src/lib/Interfaces/utility.interface.ts)
 
-```
-type UnitType = 'px' | 'em' | 'rem' | '%' | 'pt' | 'vw' | 'vh' | '';
+```ts
+type UnitType = "px" | "em" | "rem" | "%" | "pt" | "vw" | "vh" | "";
 
 /**
  * This is the type for input value just like CSS accept value for border-radios
  */
-export type BorderRadiusValueType =
-  | `${number}${UnitType}`
-  | `${number}${UnitType} ${number}${UnitType}`
-  | `${number}${UnitType} ${number}${UnitType} ${number}${UnitType}`
-  | `${number}${UnitType} ${number}${UnitType} ${number}${UnitType} ${number}${UnitType}`;
+export type BorderRadiusValueType = `${number}${UnitType}` | `${number}${UnitType} ${number}${UnitType}` | `${number}${UnitType} ${number}${UnitType} ${number}${UnitType}` | `${number}${UnitType} ${number}${UnitType} ${number}${UnitType} ${number}${UnitType}`;
 
 /**
  * This is the type for input value just like CSS accept value for padding, margin, border-radios
  */
-export type PaddingMarginValueType =
-  | BorderRadiusValueType
-  | `-${number}${UnitType}`
-  | `-${number}${UnitType} -${number}${UnitType}`
-  | `-${number}${UnitType} -${number}${UnitType} -${number}${UnitType}`
-  | `-${number}${UnitType} -${number}${UnitType} -${number}${UnitType} -${number}${UnitType}`;
+export type PaddingMarginValueType = BorderRadiusValueType | `-${number}${UnitType}` | `-${number}${UnitType} -${number}${UnitType}` | `-${number}${UnitType} -${number}${UnitType} -${number}${UnitType}` | `-${number}${UnitType} -${number}${UnitType} -${number}${UnitType} -${number}${UnitType}`;
 
 /**
  * This is the type for input value just like CSS accept value for height and width
@@ -100,46 +96,12 @@ export type HeightWidthValueType = `${number}${UnitType}`;
 /**
  * This is the type for input value just like CSS accept value for font weight
  */
-export type FontWeightValueType =
-  | 'unset'
-  | 'normal'
-  | 'revert'
-  | 'lighter'
-  | 'initial'
-  | 'inherit'
-  | 'bold'
-  | 'bolder'
-  | '100'
-  | '200'
-  | '300'
-  | '400'
-  | '500'
-  | '600'
-  | '700'
-  | '800'
-  | '900';
-
+export type FontWeightValueType = "unset" | "normal" | "revert" | "lighter" | "initial" | "inherit" | "bold" | "bolder" | "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900";
 
 /**
  * This is the type for input value just like CSS accept value for font size
  */
-export type FontSizeValueType =
-  | `${number}${UnitType}`
-  | 'initial'
-  | 'inherit'
-  | 'unset'
-  | 'medium'
-  | 'revert'
-  | 'large'
-  | 'larger'
-  | 'x-large'
-  | 'xx-large'
-  | 'xxx-large'
-  | 'small'
-  | 'smaller'
-  | 'x-small'
-  | 'xx-small';
-
+export type FontSizeValueType = `${number}${UnitType}` | "initial" | "inherit" | "unset" | "medium" | "revert" | "large" | "larger" | "x-large" | "xx-large" | "xxx-large" | "small" | "smaller" | "x-small" | "xx-small";
 ```
 
 ## Reach me out
