@@ -26,7 +26,15 @@ This is like plug-and-play lib no need to add any customization to your project 
 
 ## How to Install
 
-`npm i ih-ng-notification` or `pnpm add ih-ng-notification`
+```shell
+npm i ih-ng-notification
+```
+
+OR
+
+```shell
+pnpm add ih-ng-notification
+```
 
 ## Setup
 

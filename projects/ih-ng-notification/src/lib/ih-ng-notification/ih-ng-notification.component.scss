@@ -20,25 +20,27 @@ mat-icon {
 }
 
 @mixin notification-msg($bg-color) {
-  color: get-text-color($bg-color) !important;
+  --mdc-snackbar-container-color: $bg-color !important;
+  --mat-mdc-snack-bar-button-color: #fff;
+  --mdc-snackbar-supporting-text-color: get-text-color($bg-color) !important;
   background-color: $bg-color !important;
+  color: get-text-color($bg-color) !important;
   min-height: 2.4rem;
 }
 
-::ng-deep .success-notification {
-  @include notification-msg(#00a800);
-}
-
-::ng-deep .error-notification {
-  @include notification-msg(#d70b00);
-}
-
-::ng-deep .warning-notification {
-  @include notification-msg(#ec8c33);
-}
-
-::ng-deep .info-notification {
-  @include notification-msg(#8adef8);
+::ng-deep .mat-mdc-snack-bar-container {
+  &.success-notification {
+    @include notification-msg(#00a800);
+  }
+  &.error-notification {
+    @include notification-msg(#d70b00);
+  }
+  &.warning-notification {
+    @include notification-msg(#ec8c33);
+  }
+  &.info-notification {
+    @include notification-msg(#8adef8);
+  }
 }
 
 .msg {
