@@ -8,7 +8,10 @@ import {
 } from '@angular/core';
 import { FontSizeValueType } from '../Interfaces/utility.interface';
 
-@Directive({ selector: '[ihFS]' })
+@Directive({
+    selector: '[ihFS]',
+    standalone: false
+})
 export class FontSizeDirective implements AfterViewInit, OnChanges {
   // Input for font size
   @Input() ihFS!: FontSizeValueType;

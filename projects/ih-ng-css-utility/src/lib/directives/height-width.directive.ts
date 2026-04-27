@@ -8,7 +8,10 @@ import {
 } from '@angular/core';
 import { HeightWidthValueType } from '../Interfaces/utility.interface';
 
-@Directive({ selector: '[ihHW]' })
+@Directive({
+    selector: '[ihHW]',
+    standalone: false
+})
 export class HeightWidthDirective implements AfterViewInit, OnChanges {
   // Input for padding
   @Input() hValue!: HeightWidthValueType;

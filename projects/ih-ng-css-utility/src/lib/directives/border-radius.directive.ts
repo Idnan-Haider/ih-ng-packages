@@ -8,7 +8,10 @@ import {
 } from '@angular/core';
 import { BorderRadiusValueType } from '../Interfaces/utility.interface';
 
-@Directive({ selector: '[ihBR]' })
+@Directive({
+    selector: '[ihBR]',
+    standalone: false
+})
 export class BorderRadiusDirective implements AfterViewInit, OnChanges {
   // Input for border radius
   @Input() ihBR!: BorderRadiusValueType;

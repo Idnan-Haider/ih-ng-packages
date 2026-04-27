@@ -8,7 +8,10 @@ import {
 } from '@angular/core';
 import { FontWeightValueType } from '../Interfaces/utility.interface';
 
-@Directive({ selector: '[ihFW]' })
+@Directive({
+    selector: '[ihFW]',
+    standalone: false
+})
 export class FontWeightDirective implements AfterViewInit, OnChanges {
   // Input for font-weight
   @Input() ihFW!: FontWeightValueType;

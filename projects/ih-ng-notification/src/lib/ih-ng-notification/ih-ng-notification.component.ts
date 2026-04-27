@@ -7,9 +7,10 @@ import {
 import { NotificationDataInterface } from '../interfaces/ih-ng-notification.interface';
 
 @Component({
-  selector: 'ih-ng-notification',
-  templateUrl: './ih-ng-notification.component.html',
-  styleUrls: ['./ih-ng-notification.component.scss'],
+    selector: 'ih-ng-notification',
+    templateUrl: './ih-ng-notification.component.html',
+    styleUrls: ['./ih-ng-notification.component.scss'],
+    standalone: false
 })
 export class IHNotificationComponent {
   /**
