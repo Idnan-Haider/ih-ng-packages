@@ -2,18 +2,23 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./projects",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
       "ih-ng-css-utility": [
-        "dist/ih-ng-css-utility"
+        "./projects/ih-ng-css-utility/src/public-api.ts"
+      ],
+      "ih-ng-css-utility/*": [
+        "./projects/ih-ng-css-utility/src/*"
       ],
       "ih-ng-notification": [
-        "dist/ih-ng-notification"
+        "./projects/ih-ng-notification/src/public-api.ts"
+      ],
+      "ih-ng-notification/*": [
+        "./projects/ih-ng-notification/src/*"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,
