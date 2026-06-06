@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./projects",
+    "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "strict": true,
@@ -21,6 +21,7 @@
         "./projects/ih-ng-notification/src/*"
       ]
     },
+    "skipLibCheck": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
@@ -33,6 +34,11 @@
     "module": "es2020",
     "useDefineForClassFields": false
   },
+  "include": [
+    "src/**/*.ts",
+    ".storybook/**/*.ts",
+    "projects/**/*.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

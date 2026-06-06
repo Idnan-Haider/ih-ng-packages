@@ -64,6 +64,97 @@
           }
         }
       }
+    },
+    "storybook": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/storybook",
+      "sourceRoot": "projects/storybook/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/storybook/src/main.ts",
+            "tsConfig": "projects/storybook/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/storybook/public"
+              }
+            ],
+            "styles": [
+              "projects/storybook/src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/ih-ng-css-utility/src/lib"
+              ]
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "storybook:build:production"
+            },
+            "development": {
+              "buildTarget": "storybook:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "storybook:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": ".storybook",
+            "browserTarget": "storybook:build",
+            "compodoc": false,
+            "outputDir": "dist/storybook/storybook"
+          }
+        }
+      }
     }
   },
   "cli": {

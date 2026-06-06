@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:libs": "ng build ih-ng-css-utility && ng build ih-ng-notification",
+    "storybook": "ng run storybook:storybook",
+    "storybook:build": "ng run storybook:build-storybook",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -30,7 +32,15 @@
     "@angular/build": "^21.2.8",
     "@angular/cli": "~21.2.8",
     "@angular/compiler-cli": "^21.2.10",
+    "@chromatic-com/storybook": "^3.2.7",
+    "@storybook/addon-essentials": "^8.5.0",
+    "@storybook/addon-interactions": "^8.5.0",
+    "@storybook/addon-links": "^8.5.0",
+    "@storybook/angular": "^8.5.0",
+    "@storybook/blocks": "^8.5.0",
+    "@storybook/test": "^8.5.0",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^25.9.1",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -38,6 +48,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^21.2.3",
+    "storybook": "^8.5.0",
     "typescript": "~5.9.3"
   }
 }
