@@ -16,7 +16,10 @@ import {
   JustifyContentType,
 } from '../Interfaces/flex.interface';
 
-@Directive({ selector: '[ihFlex]' })
+@Directive({
+    selector: '[ihFlex]',
+    standalone: false
+})
 export class FlexDirective implements AfterViewInit, OnChanges {
   /**
    * @description This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept.

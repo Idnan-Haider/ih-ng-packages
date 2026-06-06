@@ -2,36 +2,43 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
       "ih-ng-css-utility": [
-        "dist/ih-ng-css-utility"
+        "./projects/ih-ng-css-utility/src/public-api.ts"
+      ],
+      "ih-ng-css-utility/*": [
+        "./projects/ih-ng-css-utility/src/*"
       ],
       "ih-ng-notification": [
-        "dist/ih-ng-notification"
+        "./projects/ih-ng-notification/src/public-api.ts"
+      ],
+      "ih-ng-notification/*": [
+        "./projects/ih-ng-notification/src/*"
       ]
     },
+    "skipLibCheck": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
     "useDefineForClassFields": false
   },
+  "include": [
+    "src/**/*.ts",
+    ".storybook/**/*.ts",
+    "projects/**/*.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

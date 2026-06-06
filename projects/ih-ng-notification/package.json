@@ -1,6 +1,6 @@
 {
   "name": "ih-ng-notification",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "A simple lib to show notification messages using Angular Material's snack bar.",
   "author": "Idnan Haider",
   "repository": {
@@ -18,12 +18,12 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": ">=14.0.0",
-    "@angular/core": ">=14.0.0"
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0"
   },
   "dependencies": {
-    "@angular/cdk": ">=14.0.0",
-    "@angular/material": ">=14.0.5",
+    "@angular/cdk": ">=21.0.0",
+    "@angular/material": ">=21.0.0",
     "tslib": "^2.3.0"
   }
 }

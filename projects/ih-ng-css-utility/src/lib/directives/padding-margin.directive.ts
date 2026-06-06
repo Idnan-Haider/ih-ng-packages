@@ -7,7 +7,10 @@ import {
 } from '@angular/core';
 import { PaddingMarginValueType } from '../Interfaces/utility.interface';
 
-@Directive({ selector: '[ihPM]' })
+@Directive({
+    selector: '[ihPM]',
+    standalone: false
+})
 export class PaddingMarginDirective implements AfterViewInit {
   // Input for padding
   @Input() pValue!: PaddingMarginValueType;

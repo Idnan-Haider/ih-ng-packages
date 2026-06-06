@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 mat-icon {
   width: 1.6rem;
   height: 1.6rem;
@@ -12,7 +14,7 @@ mat-icon {
 }
 
 @function get-text-color($color) {
-  @if (lightness($color) > 50) {
+  @if (color.channel($color, "lightness", $space: hsl) > 50) {
     @return #000000;
   } @else {
     @return #ffffff;
@@ -20,9 +22,9 @@ mat-icon {
 }
 
 @mixin notification-msg($bg-color) {
-  --mdc-snackbar-container-color: $bg-color !important;
+  --mat-snackbar-container-color: $bg-color !important;
   --mat-mdc-snack-bar-button-color: #fff;
-  --mdc-snackbar-supporting-text-color: get-text-color($bg-color) !important;
+  --mat-snackbar-supporting-text-color: get-text-color($bg-color) !important;
   background-color: $bg-color !important;
   color: get-text-color($bg-color) !important;
   min-height: 2.4rem;
@@ -39,7 +41,7 @@ mat-icon {
     @include notification-msg(#ec8c33);
   }
   &.info-notification {
-    @include notification-msg(#8adef8);
+    @include notification-msg(#ace1ff);
   }
 }
 

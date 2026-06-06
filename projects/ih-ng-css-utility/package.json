@@ -1,6 +1,6 @@
 {
   "name": "ih-ng-css-utility",
-  "version": "0.0.8",
+  "version": "1.0.0",
   "description": "A simple utility that provides you some directives to set some basic CSS at run time",
   "author": "Idnan Haider",
   "repository": {
@@ -24,8 +24,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": ">=14.0.0",
-    "@angular/core": ">=14.0.0"
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -1,4 +1,4 @@
-type UnitType = 'px' | 'em' | 'rem' | '%' | 'pt' | 'vw' | 'vh' | '';
+type UnitType = 'px' | 'em' | 'rem' | '%' | 'pt' | 'vw' | 'dvw' | 'vh' | 'dvh' | '';
 
 /**
  * This is the type for input value just like CSS accept value for border-radios
