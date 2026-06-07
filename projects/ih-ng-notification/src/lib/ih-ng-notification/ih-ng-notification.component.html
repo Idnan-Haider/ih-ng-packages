@@ -12,13 +12,13 @@
     <div [innerHTML]="notificationData.message"></div>
   </div>
 
-  <mat-icon
-    matTooltip="{{ notificationData.action?.tooltip }}"
-    class="icon-cursor-pointer"
-    (click)="customAction()"
-  >
-    {{
-      notificationData.closeable ? "close" : notificationData.action?.icon
-    }}</mat-icon
-  >
+  @if (notificationData.closeable || notificationData.action) {
+    <mat-icon
+      [matTooltip]="notificationData.action?.tooltip ?? ''"
+      class="icon-cursor-pointer"
+      (click)="customAction()"
+    >
+      {{ notificationData.closeable ? 'close' : notificationData.action?.icon }}
+    </mat-icon>
+  }
 </div>

@@ -155,6 +155,35 @@
           }
         }
       }
+    },
+    "ih-utils": {
+      "projectType": "library",
+      "root": "projects/ih-utils",
+      "sourceRoot": "projects/ih-utils/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "options": {
+            "project": "projects/ih-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ih-utils/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ih-utils/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/ih-utils/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

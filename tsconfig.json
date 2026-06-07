@@ -19,6 +19,12 @@
       ],
       "ih-ng-notification/*": [
         "./projects/ih-ng-notification/src/*"
+      ],
+      "ih-utils": [
+        "./projects/ih-utils/src/public-api.ts"
+      ],
+      "ih-utils/*": [
+        "./projects/ih-utils/src/*"
       ]
     },
     "skipLibCheck": true,
